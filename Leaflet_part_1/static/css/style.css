@@ -9,3 +9,13 @@ body {
     height: 100%;
   }
   
+  /* Set legend style */
+  .info {
+    padding: 1px 10px;
+    background: #ebfae2;
+    border-radius: 5px;
+  }
+
+  .legend {
+    
+  }
