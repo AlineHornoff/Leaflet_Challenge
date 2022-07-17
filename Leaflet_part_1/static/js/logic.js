@@ -1,4 +1,4 @@
-// Defiine earthquakes GeoJson URL 
+// Define earthquakes GeoJson URL 
 var earthquakesURL = "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson";
 
 // Create earthquake layerGroup
@@ -23,7 +23,7 @@ var myMap = L.map("map", {
     layers: [grayScaleMap, earthquakes]
 });
 
-//
+// Get geoJson data
 d3.json(earthquakesURL, function(earthquakeData) {
     // Set marker size by magnitude
     function markerSize(magnitude){
@@ -38,6 +38,8 @@ d3.json(earthquakesURL, function(earthquakeData) {
             case depth > 70:
                 return "orangered";
             case depth > 50:
+                return "orange";
+            case depth > 30:
                 return "gold";
             case depth > 10:
                 return "yellow";
